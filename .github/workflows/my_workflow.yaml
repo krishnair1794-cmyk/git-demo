@@ -7,16 +7,8 @@ jobs:
   explore-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-
       - name: Show event info
-        run: |
-          echo "The job was triggered by a ${{ github.event_name }} event."
-          echo "Running on ${{ runner.os }}."
-          echo "Branch/ref: ${{ github.ref }}"
-          echo "Repository: ${{ github.repository }}"
+        run: echo "GitHub Actions is working"
 
       - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+        run: ls
