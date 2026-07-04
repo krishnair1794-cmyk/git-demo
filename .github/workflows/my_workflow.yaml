@@ -12,6 +12,11 @@ jobs:
 
       - name: List files in the repository
         run: ls
+      - name: Debug
+        run: |
+          pwd
+          ls -la
+          find . -name "requirements.txt"
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13' 
