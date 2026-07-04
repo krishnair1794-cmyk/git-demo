@@ -6,21 +6,30 @@ on:
 jobs:
   explore-github-actions:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Show event info
         run: echo "GitHub Actions is working"
 
-      - name: List files in the repository
-        run: ls
+      - name: List files
+        run: ls -la
+
       - name: Debug
         run: |
           pwd
           ls -la
           find . -name "requirements.txt"
+
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.13' 
+          python-version: '3.13'
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
       - name: Run the script
         run: python app.py
