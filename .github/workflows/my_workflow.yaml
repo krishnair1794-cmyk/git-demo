@@ -33,3 +33,6 @@ jobs:
 
       - name: Run the script
         run: python app.py
+
+      - name: Run tests
+        run: pytest test_logic.py
