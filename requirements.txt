@@ -13,4 +13,3 @@ redis
 pytest
 uvicorn
 fastapi
-pytest
